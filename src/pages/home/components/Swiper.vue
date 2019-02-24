@@ -22,13 +22,13 @@ export default {
       swiperList: [{
         id: '001',
         url: 'http://img1.qunarzz.com/piao/fusion/1804/13/e1188b0d0f21b902.jpg_750x200_f85c782a.jpg',
-      },{
+      }, {
         id: '002',
         url: 'http://img1.qunarzz.com/piao/fusion/1712/51/36632b2cb850e902.jpg_750x200_fa4120db.jpg',
-      },{
+      }, {
         id: '003',
         url: 'http://img1.qunarzz.com/piao/fusion/1806/8b/2680212fadf30002.jpg_750x200_f85409ac.jpg',
-      },{
+      }, {
         id: '004',
         url: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/61c3b6dc2a3b1593e82667a5d92a6706.jpg_750x200_1ec098e6.jpg',
       }],

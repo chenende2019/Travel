@@ -37,7 +37,8 @@ export default {
       margin-top: .12rem
       margin-left: .2rem
       background: #ffffff
-      border-radius: .1rem
+      //给边框四角添加弧形过渡效果
+      border-radius: .50rem 0rem
       color: #ccc
       padding-left: .2rem
     .header-right
