@@ -10,7 +10,6 @@ import router from './router';
 
 fastClick.attach(document.body);
 Vue.config.productionTip = false;
-
 Vue.use(VueAwesomeSwiper);
 
 /* eslint-disable no-new */
