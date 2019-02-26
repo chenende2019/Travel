@@ -65,6 +65,7 @@ export default {
         text: '古刹灵隐',
       }],
       swiperOption: {
+        pagination: '.swiper-pagination',
       },
     };
   },
@@ -88,8 +89,17 @@ export default {
   @import "~styles/mixins.styl"
   @import '~styles/varibles.styl'
   .icons >>> .swiper.container
-    bottom: 10
-    height: 100
+    height: 0
+    padding-bottom 40%
+  .icons >>> .swiper-pagination-bullet-active
+    background: $bgColor
+  .icons >>> .swiper-pagination
+    position: relative
+    top: 0
+    left: 0
+    right: 0
+    box-sizing: border-box
+    padding: 0.3rem
   .icon
     position: relative
     overflow hidden
@@ -104,7 +114,7 @@ export default {
       right: 0
       bottom: .3rem
       box-sizing: border-box
-      padding: .1rem
+      padding: .2rem
       .icon-img-content
         display: block
         margin: 0 auto
@@ -117,6 +127,7 @@ export default {
       line-height: .44rem
       height: .44rem
       color: $darkTextColor
+      padding-left .2rem
       text-align: center
       ellipsis()
 </style>
