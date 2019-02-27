@@ -90,16 +90,12 @@ export default {
   @import '~styles/varibles.styl'
   .icons >>> .swiper.container
     height: 0
-    padding-bottom 40%
+    padding-bottom 50%
   .icons >>> .swiper-pagination-bullet-active
     background: $bgColor
   .icons >>> .swiper-pagination
     position: relative
-    top: 0
-    left: 0
-    right: 0
-    box-sizing: border-box
-    padding: 0.3rem
+    margin-top: 0.3rem
   .icon
     position: relative
     overflow hidden
@@ -113,7 +109,6 @@ export default {
       left: 0
       right: 0
       bottom: .3rem
-      box-sizing: border-box
       padding: .2rem
       .icon-img-content
         display: block
