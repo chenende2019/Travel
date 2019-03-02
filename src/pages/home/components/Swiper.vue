@@ -18,11 +18,6 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true,
-        autoplay: {
-          delay: 300000,
-          stopOnLastSlide: false,
-          disableOnInteraction: true,
-        },
         effect: 'fade',
       },
       swiperList: [{
