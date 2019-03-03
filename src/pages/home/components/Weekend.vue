@@ -2,24 +2,13 @@
  <div>
    <div class="weekend-title">周末去哪儿</div>
    <ul>
-     <li class="item">
+     <li class="item" v-for="item of list" :key="item.id">
        <div class="img-wrapper">
-        <img class="item-img" src="http://img1.qunarzz.com/sight/source/1811/52/b6776b49d27025.jpg_r_640x214_35ae205c.jpg"/>
+        <img class="item-img" :src="item.imgUrl"/>
        </div>
        <div class="item-info">
-         <p class="item-title">美丽普陀山</p>
-         <p class="item-desc">人间仙境杭州，佛教圣地普陀山等你来玩！在这里静心接收佛家的洗礼，用心感受佛文化
-         </p>
-       </div>
-     </li>
-     <li class="item">
-       <div class="img-wrapper">
-         <img class="item-img" src="http://img1.qunarzz.com/sight/source/1811/52/b6776b49d27025.jpg_r_640x214_35ae205c.jpg"/>
-       </div>
-       <div class="item-info">
-         <p class="item-title">美丽普陀山</p>
-         <p class="item-desc">人间仙境杭州，佛教圣地普陀山等你来玩！在这里静心接收佛家的洗礼，用心感受佛文化
-         </p>
+         <p class="item-title">{{item.title}}</p>
+         <p class="item-desc">{{item.desc}}</p>
        </div>
      </li>
    </ul>
@@ -29,6 +18,9 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array,
+  },
 };
 
 </script>

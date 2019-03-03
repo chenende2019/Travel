@@ -1,12 +1,12 @@
 <template>
   <div class="icons">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="list.length">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
-            <img class="icon-img-content" :src="item.url"/>
+            <img class="icon-img-content" :src="item.imgUrl"/>
           </div>
-            <p class="icon-font">{{item.text}}</p>
+            <p class="icon-font">{{item.desc}}</p>
         </div>
       </swiper-slide>
       <p class="icon-font"></p>
@@ -17,62 +17,22 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array,
+  },
   data() {
     return {
-      icons: [{
-        id: '001',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-        text: '景点门票asfdsdfsdadf',
-      },
-      {
-        id: '002',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        text: '一日游',
-      },
-      {
-        id: '003',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-        text: '杭州必洲',
-      },
-      {
-        id: '004',
-        url: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-        text: '老和云起',
-      },
-      {
-        id: '005',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/17/99402a22ce4af302.png',
-        text: '景点赏花',
-      },
-      {
-        id: '006',
-        url: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        text: '断桥残雪',
-      },
-      {
-        id: '007',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-        text: '十里长亭',
-      },
-      {
-        id: '008',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
-        text: '古刹灵隐',
-      },
-      {
-        id: '009',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
-        text: '古刹灵隐',
-      }],
       swiperOption: {
         pagination: '.swiper-pagination',
+        loop: true,
+        autoplay: false,
       },
     };
   },
   computed: {
     pages() {
       const pages = [];
-      this.icons.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8);
         if (!pages[page]) {
           pages[page] = [];
